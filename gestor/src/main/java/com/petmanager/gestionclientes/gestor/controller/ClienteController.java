@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -75,5 +76,54 @@ public class ClienteController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al eliminar cliente.");
         }
+    }
+
+    //6. Editar informacion del cliente con auditoria
+    @PutMapping("/editar")
+    public ResponseEntity<?> editarCliente(@RequestBody EditarClienteDTO dto) {
+        try {
+            clienteService.editarCliente(dto);
+            return ResponseEntity.ok("Los datos fueron actualizados correctamente.");
+        } catch (IllegalArgumentException ex) {
+            return ResponseEntity.badRequest().body(ex.getMessage());
+        } catch (RuntimeException ex) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al guardar los cambios: " + ex.getMessage());
+        }
+    }
+
+    @PostMapping("/historial")
+    public ResponseEntity<List<HistorialCompraDTO>> obtenerHistorial(@RequestBody FiltroHistorialComprasDTO filtro) {
+        try {
+            List<HistorialCompraDTO> historial = clienteService.obtenerHistorialCompras(filtro);
+            return ResponseEntity.ok(historial);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body(Collections.emptyList());
+        }
+    }
+
+    @GetMapping("/reportes/clientes-frecuentes")
+    public ResponseEntity<List<ClienteFrecuenteDTO>> obtenerReporte(@RequestParam String periodo) {
+
+        LocalDate hoy = LocalDate.now();
+        LocalDate fechaInicio;
+
+        switch (periodo.toLowerCase()) {
+            case "ultimo_mes":
+                fechaInicio = hoy.minusMonths(1);
+                break;
+            case "ultimo_trimestre":
+                fechaInicio = hoy.minusMonths(3);
+                break;
+            case "ultimo_año":
+                fechaInicio = hoy.minusYears(1);
+                break;
+            default:
+                return ResponseEntity.badRequest().build();
+        }
+
+        List<ClienteFrecuenteDTO> resultado = clienteService.obtenerClientesFrecuentes(fechaInicio, hoy, 20);
+        return ResponseEntity.ok(resultado);
     }
 }
