@@ -1,3 +1,4 @@
+/*
 package com.petmanager.gestionclientes.gestor.security;
 
 import org.springframework.context.annotation.Bean;
@@ -39,3 +40,4 @@ public class ConfiguracionSeguridad {
         return config.getAuthenticationManager();
     }
 }
+*/
