@@ -24,7 +24,7 @@ public class PromocionService {
             }
 
             try{
-                Thread.sleep(5000); //Espera 5 segundos
+                Thread.sleep(600000); //Espera 10 minutos
                 System.out.println("[SIMULACION] Finalizada. Cerrando aplicacion");
                 System.exit(0);
             }catch (InterruptedException e){

@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7692519e-9b6f-4668-beb1-c5f32b2b14c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/controller/PromocionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/model/Promocion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/repository/PromocionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/security/ConfiguracionSeguridad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/security/ControladorAutenticacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/security/JwtFiltroAutenticacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/security/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/service/PromocionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/GestorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/GestorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/controller/PromocionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/repository/PromocionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/service/PromocionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/service/PromocionService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
