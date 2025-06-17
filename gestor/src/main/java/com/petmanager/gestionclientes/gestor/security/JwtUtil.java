@@ -1,4 +1,4 @@
-package com.petmanager.gestionclientes.gestor.security;
+/*package com.petmanager.gestionclientes.gestor.security;
 
 import io.jsonwebtoken.*;
 import org.springframework.stereotype.Component;
@@ -32,3 +32,4 @@ public class JwtUtil {
         }
     }
 }
+*/
