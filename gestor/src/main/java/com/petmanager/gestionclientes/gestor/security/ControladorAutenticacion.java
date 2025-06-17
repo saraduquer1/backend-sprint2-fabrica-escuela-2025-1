@@ -1,3 +1,4 @@
+/*
 package com.petmanager.gestionclientes.gestor.security;
 
 import com.petmanager.gestionclientes.gestor.model.Usuario;
@@ -31,3 +32,4 @@ public class ControladorAutenticacion {
         }
     }
 }
+*/
