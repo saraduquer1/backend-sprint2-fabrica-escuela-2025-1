@@ -1,4 +1,5 @@
-package com.petmanager.gestionclientes.gestor.security;
+
+/*package com.petmanager.gestionclientes.gestor.security;
 
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
@@ -43,3 +44,4 @@ public class JwtFiltroAutenticacion extends OncePerRequestFilter {
     }
 
 }
+*/
