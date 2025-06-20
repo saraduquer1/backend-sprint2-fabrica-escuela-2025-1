@@ -12,7 +12,6 @@ Este proyecto es un sistema backend desarrollado en **Spring Boot 3.4.5** para l
 - [Ejecución con Docker](#ejecución-con-docker)
 - [Autenticación y Seguridad](#autenticación-y-seguridad)
 - [Demostración del uso de la API](#demostración-del-uso-de-la-api)
-- [Monitoreo (Prometheus & Grafana)](#monitoreo-prometheus--grafana)
 - [Endpoints disponibles](#endpoints-disponibles)
 
 ---
