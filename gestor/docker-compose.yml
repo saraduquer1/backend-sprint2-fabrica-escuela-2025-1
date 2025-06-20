@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: gestor-clientes-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_APPLICATION_NAME=gestor
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-d16pgfmmcj7s73cegll0-a.oregon-postgres.render.com:5432/clientes_fsn2_kacz
+      - SPRING_DATASOURCE_USERNAME=backend
+      - SPRING_DATASOURCE_PASSWORD=kev7ugy8jej.VDR.exu
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=validate
+      - SPRING_JPA_SHOW_SQL=true
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana-datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+
+volumes:
+  grafana_data:
