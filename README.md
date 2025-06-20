@@ -25,7 +25,6 @@ Este proyecto es un sistema backend desarrollado en **Spring Boot 3.4.5** para l
 - PostgreSQL
 - Docker & Docker Compose
 - Prometheus / Grafana
-- Micrometer (para métricas)
 - Maven
 
 ---
@@ -93,33 +92,15 @@ La seguridad se maneja con JWT. Para autenticarte:
 
 Puedes ver una demostración completa de los endpoints funcionando en el siguiente video:
 
-📹 **Video demostrativo**: [Ver en YouTube](https://www.youtube.com/watch?v=TU_LINK_AQUI)
+📹 **Video demostrativo**: [Ver en Drive](https://drive.google.com/drive/folders/1GoAluWkThgeu6bMgODD9yhHX_5WYinB_?usp=sharing)
 
 Este video muestra:
 
-- Autenticación de usuarios con JWT
 - Registro de clientes con preferencias
 - Búsquedas por filtros
 - Edición y eliminación con auditoría
 - Historial de compras con paginación y filtros
 - Reportes de clientes frecuentes
-
----
-
-## 📊 Monitoreo (Prometheus & Grafana)
-
-- Prometheus: [http://localhost:9090](http://localhost:9090)
-- Grafana: [http://localhost:3000](http://localhost:3000)
-  - Usuario: `admin`
-  - Contraseña: `admin`
-
-Agrega como DataSource:  
-- URL: `http://prometheus:9090`
-
-Métricas disponibles en `/actuator/prometheus`, como:
-- `http_server_requests_seconds_count`
-- `jvm_memory_used_bytes`
-- `process_cpu_usage`
 
 ---
 
@@ -135,13 +116,11 @@ Métricas disponibles en `/actuator/prometheus`, como:
 | PUT    | `/clientes/editar`                       | Editar cliente (con auditoría) |
 | DELETE | `/clientes/eliminar`                     | Eliminar cliente (con auditoría y confirmación) |
 | POST   | `/clientes/historial`                    | Historial de compras con filtros (fecha, monto, categoría, paginación) |
-| GET    | `/clientes/reportes/clientes-frecuentes?periodo=ultimo_mes` | Reporte de clientes frecuentes |
+| GET    | `/clientes/reportes/clientes-frecuentes?periodo=ultimo_mes` | Reporte de clientes frecuentes en el ultimo, tambien se puede ver el reporte del ulitmo trimestre y año |
 
 ---
 
 ## 📞 Contacto
 
-Desarrollado por: [Tu Nombre]  
-Correo: tunombre@correo.com
-
+Desarrollado por: [Sebastian Amaya Perez, Dorian Jaramillo] 
 ---
